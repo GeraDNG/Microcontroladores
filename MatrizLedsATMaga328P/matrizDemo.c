@@ -1,0 +1,26 @@
+    #include <mega328P.h>
+    #include <delay.h>
+    #include "matriz.h"
+  
+
+
+  
+void main(void)
+{
+    ConfiguraMax2();
+    while(1)
+    {
+        //DespliegaMensaje("HOLA  ",700);
+        //MandaMax7219(0x01FF);
+        /*MandaMax7219(0x027F); 
+        MandaMax7219(0x033F); 
+        MandaMax7219(0x041F); 
+        MandaMax7219(0x050F); 
+        MandaMax7219(0x0607);
+        MandaMax7219(0x0703);
+        MandaMax7219(0x0801);*/
+        MandaMax7219DosMatrices(0x01FF01AA);  
+        MandaMax7219DosMatrices(0x000002AA); 
+        MandaMax7219DosMatrices(0x08550000); 
+    }
+}
